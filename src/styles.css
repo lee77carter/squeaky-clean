@@ -1,0 +1,43 @@
+.App {
+    font-family: sans-serif;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .App h1,
+  .App h2 {
+    text-align: center;
+  }
+  
+  .tabs {
+    max-width: 400px;
+    margin: 70px auto;
+  }
+  
+  .tabs div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tab-title {
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .tab-title.active {
+    background-color: #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab-content {
+    padding: 20px 25px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+  }
+  
