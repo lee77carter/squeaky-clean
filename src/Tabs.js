@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Tabs = () => {
+const Tabs = ({ services }) => {
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+
   return (
     <section className="tabs">
-      <div></div>
-      <div></div>
+      <div>
+        {services.map((service, index) => (
+          <h3
+            className={`tab-title ${index === activeTabIndex && "active"}`}
+            key={index}
+            onClick={() => setActiveTabIndex(index)}
+          >
+            {service.name}
+          </h3>
+        ))}
+      </div>
+      <div className="tab-content">
+        <p>{services[activeTabIndex].description}</p>
+      </div>
     </section>
   );
 };
